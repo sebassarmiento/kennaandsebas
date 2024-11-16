@@ -1,0 +1,85 @@
+/* Add-Activity.css */
+
+.add-activity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f5dc; /* beige for an earthy background */
+  border: 2px solid #8fbc8f; /* sage green border */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  margin: 1.5rem auto;
+  max-width: 600px;
+}
+
+.activity-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #556b2f; /* dark olive green border */
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #2e4600; /* forest green */
+  background-color: #e8f0e0; /* light greenish tint */
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.activity-input:focus {
+  border-color: #6b8e23; /* olive green on focus */
+}
+
+.add-button {
+  background-color: #8fbc8f; /* sage green */
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50%;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-button:hover {
+  background-color: #6b8e23; /* darker green on hover */
+  transform: scale(1.1); /* slight lift effect */
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .add-activity {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .activity-input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .add-button {
+    font-size: 1.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-activity {
+    padding: 0.75rem;
+  }
+
+  .activity-input {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .add-button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,38 @@
+/* Random-Memory.css */
+
+.random-memory-button {
+  background-color: #8fbc8f; /* sage green */
+  color: #fff;
+  border: 2px solid #556b2f; /* dark olive green border */
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  margin: 2rem auto;
+  display: block;
+  max-width: 400px;
+  text-align: center;
+}
+
+.random-memory-button:hover {
+  background-color: #6b8e23; /* darker green on hover */
+  transform: scale(1.05); /* slight lift effect */
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .random-memory-button {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .random-memory-button {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+}

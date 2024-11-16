@@ -1,0 +1,104 @@
+/* Header.css */
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f0efe9, #c8d8b9); /* gradient mimicking sunlight over foliage */
+  border-bottom: 5px solid #8fbc8f; /* sage green border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow for depth */
+  position: relative;
+  overflow: hidden; /* prevent overflow of decorative elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  font-family: 'Amatic SC', cursive; /* rustic, handwritten style */
+  font-size: 3.5rem;
+  color: #2e4600; /* forest green */
+  margin: 0.5rem 0;
+  padding: 0px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  max-width: 1000px;
+}
+
+.header-subtitle {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.25rem;
+  color: #556b2f; /* dark olive green */
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Decorative Outdoorsy Elements */
+.header::before, .header::after {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  opacity: 0.9;
+  animation: none 6s ease-in-out infinite; /* floating animation */
+}
+
+.header::before {
+  background-image: url('../assets/tree.png'); /* Tree icon */
+  bottom: -1px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.header::after {
+  background-image: url('../assets/mountain.png'); /* Mountain icon */
+  bottom: -16px;
+  right: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+/* Adding a few more natural decorative elements */
+.header::before, .header::after {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
+}
+
+/* Nature-Inspired Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .header-subtitle {
+    font-size: 1rem;
+  }
+  .header::before, .header::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-subtitle {
+    font-size: 0.875rem;
+  }
+  .header::before, .header::after {
+    width: 30px;
+    height: 30px; /* make the icons smaller for mobile view */
+  }
+}
+
